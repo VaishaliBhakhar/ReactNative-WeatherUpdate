@@ -11,6 +11,12 @@
     "@react-native-community/masked-view": "0.1.10",
     "@react-navigation/native": "^5.8.2",
     "@react-navigation/stack": "^5.11.1",
+    "@types/enzyme": "^3.10.8",
+    "@types/enzyme-adapter-react-16": "^1.0.6",
+    "@types/jest": "^26.0.15",
+    "@types/mocha": "^8.0.3",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
     "expo": "~39.0.2",
     "expo-splash-screen": "~0.6.2",
     "expo-updates": "~0.3.3",
@@ -36,7 +42,13 @@
     "typescript": "~3.9.5"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|@react-native-community|@react-navigation)"
+    ]
   },
   "private": true
 }

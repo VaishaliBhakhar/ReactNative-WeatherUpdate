@@ -142,7 +142,7 @@ export default class Weather extends Component<{},testProps> {
                   (
                     <div>
                         <ForecastCard request={forecast.request} location={forecast.location} current={forecast.current} />
-                        <Button onPress = { this.goToMultiCityScreen } style={styles.btn} color='black' >Show weather for other cities</Button>
+                        <Button testID="all-cities-weather" onPress = { this.goToMultiCityScreen } style={styles.btn} color='black' >Show weather for other cities</Button>
                             
                     </div>
                   )
